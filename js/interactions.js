@@ -1,3 +1,5 @@
-function closeNavbar(){
-    document.getElementById("navbar").style.width = "0";
-}
+function toggleNavbar() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.classList.toggle('active');
+  }
+  
