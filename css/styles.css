@@ -1,0 +1,57 @@
+body {
+    background-color: #FFFDD0;
+}
+
+.sidebar {
+    background-color: salmon;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    transition: all 0.5s;
+    margin-left: -250px;
+    z-index: 1;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar a{
+    padding: 5px;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar a:hover{
+    background-color: #00000022;
+}
+
+.toggle-btn {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.main{
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.banner {
+    background-color: burlywood;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.open {
+    margin-left: 0px;
+}
+
+.open-main {
+    margin-left: 250px;
+}

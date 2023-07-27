@@ -10,4 +10,4 @@
       }
   
       // Load content from 'template.html' and render it
-      loadHTMLContent('/Petshop-project/js/navbar.html', 'navbarTemplate');
+      loadHTMLContent('/Petshop-project/templates/navbar.html', 'navbarTemplate');
