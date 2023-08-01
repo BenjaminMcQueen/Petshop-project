@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     background-color: #FFFDD0;
     height: 100%;
 }
@@ -13,18 +14,18 @@ body, html {
     z-index: 1;
 }
 
-.sidebar ul{
+.sidebar ul {
     list-style: none;
 }
 
-.sidebar a{
+.sidebar a {
     padding: 5px;
     font-size: large;
     text-decoration: none;
     color: black;
 }
 
-.sidebar a:hover{
+.sidebar a:hover {
     background-color: #00000022;
 }
 
@@ -36,7 +37,7 @@ body, html {
     transition: all 0.5s;
 }
 
-.main{
+.main {
     min-height: 100%;
     transition: all 0.5s;
     padding: 10px;
@@ -58,16 +59,55 @@ body, html {
     margin-left: 250px;
 }
 
-.footer{
-    width: 100%;
+.footer {
+    max-width: 100%;
+    padding: 5px;
     padding-top: 20px;
     background-color: #944A20;
     transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (max-height: 400px){
-    .footer{
+.socials {
+    align-self: flex-start;
+    /* padding: 5px; */
+}
+
+.socials a {
+    text-decoration: none;
+    color: #000011dd;
+}
+
+.footer-contacts {
+    align-self: flex-end;
+}
+
+#footer-row {
+    display: flex;
+
+
+}
+
+@media (max-height: 400px) {
+    .footer {
         position: absolute;
         bottom: 0px;
     }
 }
+
+@media (max-width: 500px){
+    .sidebar{
+        width: 100%;
+        margin-left: -100%;
+    }
+
+    .open{
+        margin-left: 0px;
+    }
+
+    .open-main {
+        margin-left: 100%;
+    }
+}
+

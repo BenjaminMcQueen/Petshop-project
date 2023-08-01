@@ -12,3 +12,4 @@
       // Load content from 'template.html' and render it
       loadHTMLContent('/Petshop-project/templates/navbar.html', 'navbarTemplate');
       loadHTMLContent('/Petshop-project/templates/footer.html', 'footerTemplate');
+      loadHTMLContent('/Petshop-project/templates/dependencies.html', 'dependencyTemplate');
