@@ -1,5 +1,6 @@
-body {
+body, html {
     background-color: #FFFDD0;
+    height: 100%;
 }
 
 .sidebar {
@@ -36,6 +37,7 @@ body {
 }
 
 .main{
+    min-height: 100%;
     transition: all 0.5s;
     padding: 10px;
 }
@@ -54,4 +56,18 @@ body {
 
 .open-main {
     margin-left: 250px;
+}
+
+.footer{
+    width: 100%;
+    padding-top: 20px;
+    background-color: #944A20;
+    transition: 0.5s;
+}
+
+@media (max-height: 400px){
+    .footer{
+        position: absolute;
+        bottom: 0px;
+    }
 }
