@@ -38,12 +38,14 @@ html {
 }
 
 .main {
+    min-width: 100%;
     min-height: 100%;
     transition: all 0.5s;
     padding: 10px;
 }
 
 .banner {
+    min-width: 100%;
     background-color: burlywood;
     text-align: center;
     padding-top: 5px;
@@ -60,7 +62,7 @@ html {
 }
 
 .footer {
-    max-width: 100%;
+    min-width: 100%;
     padding: 5px;
     padding-top: 20px;
     background-color: #944A20;
@@ -71,7 +73,6 @@ html {
 
 .socials {
     align-self: flex-start;
-    /* padding: 5px; */
 }
 
 .socials a {
@@ -86,7 +87,26 @@ html {
 #footer-row {
     display: flex;
 
+}
 
+.contact-page{
+    width: 80%;
+    text-align: center;
+}
+
+.widebox{
+    min-width: 200px;
+    width: 80%;
+}
+
+.longbox{
+    height: 250px;
+}
+
+.contact-label{
+    margin-left: 10%;
+    margin-top: 10px;
+    text-align: left;
 }
 
 @media (max-height: 400px) {
@@ -108,6 +128,19 @@ html {
 
     .open-main {
         margin-left: 100%;
+        min-width: 100%;
+    }
+
+    .banner{
+        min-width: 100%;
+    }
+
+    .footer{
+        min-width: 100%;
+    }
+
+    .main{
+        min-width: 100%;
     }
 }
 
