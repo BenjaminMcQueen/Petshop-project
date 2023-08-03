@@ -14,33 +14,32 @@
     <div id="navbarTemplate"></div>
 
     <div class="banner">
-        <h1>Welcome to Pet Paradise!</h1>
-        <h5>Your pets and pet needs all in one place</h5>
+        <h1>Contact Us!</h1>
+        <h5>Fill out the details below and we'll get back to you lickety split!</h5>
     </div>
 
     <div class="main contact-page">
-        <div class="row col-12">
-            <h2>Contact Us!</h2>
-            <p>Fill out the details below and we'll get back to you lickety split!</p>
-        </div>
         <br>
-        <form class="row">
+        <form class="row" onsubmit="submitContact(); return false">
             <div>
                 <p class="contact-label">Name:</p>
-                <input class="widebox">
+                <input class="widebox" id="name">
             </div>
             <br>
             <div>
                 <p class="contact-label">Email:</p>
-                <input class="widebox">
+                <input class="widebox" id="email">
             </div>
             <div>
                 <p class="contact-label">Message:</p>
-                <textarea rows="10" cols="200" class="widebox longbox"></textarea>
+                <textarea rows="10" class="widebox longbox" id="message"></textarea>
+            </div>
+            <div>
+                <button class="contact-button btn btn-light btn-outline-dark">Submit</button>
             </div>
         </form>
     </div>
-    <div id="footerTemplate"></div>
+    <div id="footerTemplate" class="short-page-footer"></div>
 
     <!------------------------------------------------SCRIPTS----------------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
@@ -49,7 +48,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <script src="/Petshop-project/js/templates.js"></script>
-
+    <script src="/Petshop-project/js/submitButton.js"></script>
 </body>
 
 </html>

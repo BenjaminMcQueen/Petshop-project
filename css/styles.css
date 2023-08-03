@@ -1,13 +1,35 @@
-body,
-html {
+html, body {
     background-color: #FFFDD0;
     height: 100%;
+    width: 100%;
+}
+
+
+.row{
+    /* Bootstrap Override */
+    margin: auto !important;
+}
+
+#about-us {
+    padding: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.soft-brown-background {
+    padding: 3vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-radius: 10%;
+    background-color: #944A20aa;
 }
 
 .sidebar {
     background-color: salmon;
     position: fixed;
-    height: 100%;
+    height: 100vh;
     width: 250px;
     transition: all 0.5s;
     margin-left: -250px;
@@ -39,7 +61,7 @@ html {
 
 .main {
     min-width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     transition: all 0.5s;
     padding: 10px;
 }
@@ -89,40 +111,72 @@ html {
 
 }
 
-.contact-page{
-    width: 80%;
+.contact-page {
+    width: 100%;
     text-align: center;
 }
 
-.widebox{
+.widebox {
     min-width: 200px;
     width: 80%;
 }
 
-.longbox{
+.longbox {
     height: 250px;
 }
 
-.contact-label{
+.map {
+    height: 800px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    border: pink solid 3px;
+    border-radius: 2%;
+}
+
+.contact-button{
+    width: 60vw;
+    height: 50px;
+}
+
+.contact-label {
     margin-left: 10%;
     margin-top: 10px;
     text-align: left;
 }
 
-@media (max-height: 400px) {
-    .footer {
-        position: absolute;
-        bottom: 0px;
+.short-page-footer{
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+#menu-us{
+    position: absolute; 
+    bottom: 20px;
+}
+
+@media (max-height: 765px)
+{
+    .short-page-footer{
+        position: static;
     }
 }
 
-@media (max-width: 500px){
-    .sidebar{
-        width: 100%;
+@media (max-width: 500px) {
+    .sidebar {
+        width: 100vw;
         margin-left: -100%;
+        font-size: larger;
+        text-align: center;
     }
 
-    .open{
+    .short-page-footer{
+        margin-top: 0vh;
+    }
+
+    .open {
         margin-left: 0px;
     }
 
@@ -131,16 +185,15 @@ html {
         min-width: 100%;
     }
 
-    .banner{
+    .banner {
         min-width: 100%;
     }
 
-    .footer{
+    .footer {
         min-width: 100%;
     }
 
-    .main{
+    .main {
         min-width: 100%;
     }
 }
-
