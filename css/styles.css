@@ -1,6 +1,6 @@
 html, body {
     background-color: #FFFDD0;
-    height: 100%;
+    max-height: 100%;
     width: 100%;
 }
 
@@ -11,17 +11,25 @@ html, body {
 }
 
 #about-us {
-    padding: 5vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     font-size: larger;
     font-weight: bold;
 }
 
 .soft-brown-background {
-    padding: 3vw;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 10%;
+    background-color: #944A20aa;
+}
+
+.tight-brown-background {
+    padding: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     border-radius: 10%;
     background-color: #944A20aa;
 }
@@ -34,6 +42,7 @@ html, body {
     transition: all 0.5s;
     margin-left: -250px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .sidebar ul {
@@ -77,20 +86,21 @@ html, body {
 
 .open {
     margin-left: 0px;
-}
-
-.open-main {
-    margin-left: 250px;
+    max-height: 100%;
+    overflow-y: hidden;
 }
 
 .footer {
-    min-width: 100%;
+    width: 100%;
+    max-width: 100vw;
     padding: 5px;
     padding-top: 20px;
     background-color: #944A20;
     transition: 0.5s;
     display: flex;
     justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .socials {
@@ -136,7 +146,7 @@ html, body {
 }
 
 .contact-button{
-    width: 60vw;
+    width: 60%;
     height: 50px;
 }
 
@@ -152,9 +162,25 @@ html, body {
     width:100%;
 }
 
-#menu-us{
-    position: absolute; 
-    bottom: 20px;
+.card{
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    max-width: 30vw;
+    max-height: 80vh;
+    
+    background-color: #fa7e7088;
+}
+
+.card img{
+    max-height: 50vh;
+    max-width: 25vw;
+    padding: 5px;
+    
+    object-fit: scale-down;
+    align-self: center;
+
+    border: dotted 2px brown;
 }
 
 @media (max-height: 765px)
@@ -166,14 +192,14 @@ html, body {
 
 @media (max-width: 500px) {
     .sidebar {
-        width: 100vw;
+        width: 100%;
         margin-left: -100%;
         font-size: larger;
         text-align: center;
     }
 
     .short-page-footer{
-        margin-top: 0vh;
+        margin-top: 0;
     }
 
     .open {
