@@ -1,11 +1,31 @@
-html, body {
-    background-color: #FFFDD0;
+:root {
+    --main-color-LL: #FFDDDD;
+    --main-color-L: #FFC4C4;
+    --main-color: #FFA8A8;
+    --main-color-D: #EC8080;
+    --main-color-DD: #CF5656;
+
+    --secondary-color-LL: #BCD9D9;
+    --secondary-color-L: #93C0C0;
+    --secondary-color: #6BA3A3;
+    --secondary-color-D: #4D8E8E;
+    --secondary-color-DD: #347C7C;
+
+    --tertiary-color-LL: #EEF9D7;
+    --tertiary-color-L: #E2F4BC;
+    --tertiary-color: #D4F09E;
+    --tertiary-color-D: #BBDD77;
+    --tertiary-color-DD: #9BC150;
+}
+
+html,
+body {
+    background-color: var(--tertiary-color-LL);
     max-height: 100%;
     width: 100%;
 }
 
-
-.row{
+.row {
     /* Bootstrap Override */
     margin: auto !important;
 }
@@ -18,24 +38,24 @@ html, body {
     font-weight: bold;
 }
 
-.soft-brown-background {
+.soft-background {
     padding: 3%;
     padding-top: 3%;
     padding-bottom: 3%;
     border-radius: 10%;
-    background-color: #944A20aa;
+    background-color: var(--secondary-color-L);
 }
 
-.tight-brown-background {
+.tight-background {
     padding: 1%;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-radius: 10%;
-    background-color: #944A20aa;
+    width: 100%;
+    background-color: var(--main-color-DD);
 }
 
 .sidebar {
-    background-color: salmon;
+    background-color: var(--tertiary-color);
     position: fixed;
     height: 100vh;
     width: 250px;
@@ -70,18 +90,28 @@ html, body {
 
 .main {
     min-width: 100%;
-    /* min-height: 100%; */
     transition: all 0.5s;
     padding: 10px;
 }
 
 .banner {
     min-width: 100%;
-    background-color: burlywood;
+    background-color: var(--secondary-color-D);
     text-align: center;
     padding-top: 5px;
     padding-bottom: 20px;
     transition: all 0.5s;
+}
+
+.banner img{
+    position: absolute;
+
+    height: 100px;
+
+    right: 10px;
+    top: 5px;
+
+    opacity: 0.8;
 }
 
 .open {
@@ -95,7 +125,7 @@ html, body {
     max-width: 100vw;
     padding: 5px;
     padding-top: 20px;
-    background-color: #944A20;
+    background-color: var(--secondary-color-DD);
     transition: 0.5s;
     display: flex;
     justify-content: space-between;
@@ -109,7 +139,7 @@ html, body {
 
 .socials a {
     text-decoration: none;
-    color: #000011dd;
+    color: #000000dd;
 }
 
 .footer-contacts {
@@ -145,7 +175,7 @@ html, body {
     border-radius: 2%;
 }
 
-.contact-button{
+.contact-button {
     width: 60%;
     height: 50px;
 }
@@ -156,39 +186,56 @@ html, body {
     text-align: left;
 }
 
-.short-page-footer{
+.short-page-footer {
     position: absolute;
     bottom: 0;
-    width:100%;
+    width: 100%;
 }
 
-.card{
+.card {
     margin-left: 1vw;
     margin-right: 1vw;
 
+    padding: 5px;
+
     max-width: 30vw;
-    max-height: 80vh;
-    
-    background-color: #fa7e7088;
+    min-height: 80vh;
+    margin-top: 10px;
+
+    background-color: var(--main-color-D);
 }
 
-.card img{
+.card img {
     max-height: 50vh;
     max-width: 25vw;
     padding: 5px;
-    
+
     object-fit: scale-down;
     align-self: center;
 
-    border: dotted 2px brown;
+    border: dotted 2px var(--secondary-color-DD);
 }
 
-@media (max-height: 765px)
-{
-    .short-page-footer{
+.cart {
+    display: flex;
+    align-content: space-between;
+    padding: 5px;
+}
+
+@media (max-height: 765px) {
+    .short-page-footer {
         position: static;
     }
 }
+
+/* @media (min-height: 900px)
+{
+    #homepage-footer{
+        position: absolute;
+        bottom: 0;
+        width:100%;
+    }
+} */
 
 @media (max-width: 500px) {
     .sidebar {
@@ -198,7 +245,7 @@ html, body {
         text-align: center;
     }
 
-    .short-page-footer{
+    .short-page-footer {
         margin-top: 0;
     }
 
