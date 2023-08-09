@@ -4,7 +4,7 @@ let productMarketHTML = " ";
 
 for (let i = 0; i < starProducts.length; i++) {
     productMarketHTML +=
-        "<div class='card col-lg-4'> " +
+        "<div class='card homecard col-4'> " +
             "<img class = 'card-img-top' src = '"+starProducts[i].image.url+"' alt = '"+starProducts[i].image.alt+"' >" +
                 "<div class='card-body'> " +
                     "<h5 class='card-title'>"+starProducts[i].name+"</h5> " +
