@@ -318,6 +318,17 @@ body {
 
     .picWithText {
         flex-direction: column;
+        justify-content: center;
+    }
+
+    .picWithText img{
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .btn {
+        max-width: 50vw;
+        font-size: small;
     }
 }
 
