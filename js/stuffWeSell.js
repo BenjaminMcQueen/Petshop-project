@@ -44,7 +44,7 @@ petList.push(new thing("Nadezhda", 25.00,
     new ItemImage("./img/pets/nadezhda.jpg", "A picture of Nadezhda, a shorthair kitten"),
     "Nadezhda, a curious shorthair kitten, brings boundless energy and mischief wherever she goes. With her captivating green eyes and a penchant for adventure, she's always the life of the feline party. Her playful spirit and love for exploration make her the purrfect companion for any pet lover."));
 petList.push(new thing("Raoul-droog", 1000.00,
-    new ItemImage("./img/pets/Raoul-droog.jpg", "A picture of Raoul-droog, a british shorthair"),
+    new ItemImage("./img/pets/raouldroog.jpg", "A picture of Raoul-droog, a british shorthair"),
     "Meet Raoul-droog, the dashing British shorthair with a flair for fashion. Sporting stylish sunglasses, he exudes suave charm wherever he struts. With an air of mystery and a heart of gold, he captures the hearts of all who meet him. (Yes, the glasses are included)"));
 petList.push(new thing("Trevor", 30.00,
     new ItemImage("./img/pets/trevor.jpg", "A picture of Trevor, a spaniel"),
