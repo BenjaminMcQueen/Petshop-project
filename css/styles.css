@@ -114,7 +114,10 @@ body {
 .banner img {
     position: absolute;
 
+    object-fit: scale-down;
+
     height: 100px;
+    max-width: 10vw;
 
     right: 20px;
     top: 5px;
@@ -288,7 +291,6 @@ body {
     .services-img-left {
         margin-left: 25%;
         width: 50%;
-
     }
 
     .homecard img {
@@ -311,9 +313,428 @@ body {
         max-width: 900px;
     }
 
+    .short-page-footer {
+        position: static;
+    }
+
     .banner img {
         position: relative;
         height: 15vh;
+        max-width: 150px;
+    }
+
+    .picWithText {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .picWithText img{
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .btn {
+        max-width: 50vw;
+        font-size: small;
+    }
+}
+
+@media (max-width: 575px) {
+    .homecard .btn {
+        margin-left: 60%;
+    }
+
+    .homecard {
+        min-width: 400px;
+        max-width: 400px;
+        margin: 1px;
+    }
+
+    .homecard img {
+        max-width: 80vw;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .sidebar {
+        width: 100%;
+        margin-left: -100%;
+        font-size: larger;
+        text-align: center;
+    }
+
+    .short-page-footer {
+        margin-top: 0;
+    }
+
+    .open {
+        margin-left: 0px;
+    }
+
+    .open-main {
+        margin-left: 100%;
+        min-width: 100%;
+    }
+
+    .banner {
+        min-width: 100%;
+    }
+
+    .footer {
+        min-width: 100%;
+    }
+
+    .main {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 451px) {
+
+    .homecard {
+        min-width: 400px;
+        max-width: 80vw;
+        margin: 1px;
+    }
+}
+
+@media (max-width: 398px) {
+    .homecard {
+        min-width: 200px;
+        max-width: 80vw;
+    }
+
+    .homecard .btn {
+        margin-left: 30%;
+    }
+}
+
+/* There was an exorbitant amount of fine tuning I had to do. 
+In the end, I feel like even more might be needed. */:root {
+    --main-color-LL: #FFDDDD;
+    --main-color-L: #FFC4C4;
+    --main-color: #FFA8A8;
+    --main-color-D: #EC8080;
+    --main-color-DD: #CF5656;
+
+    --secondary-color-LL: #BCD9D9;
+    --secondary-color-L: #93C0C0;
+    --secondary-color: #6BA3A3;
+    --secondary-color-D: #4D8E8E;
+    --secondary-color-DD: #347C7C;
+
+    --tertiary-color-LL: #EEF9D7;
+    --tertiary-color-L: #E2F4BC;
+    --tertiary-color: #D4F09E;
+    --tertiary-color-D: #BBDD77;
+    --tertiary-color-DD: #9BC150;
+}
+
+html,
+body {
+    background-color: var(--tertiary-color-LL);
+    max-height: 100%;
+    width: 100%;
+}
+
+.row {
+    /* Bootstrap Override */
+    margin: auto !important;
+}
+
+#about-us {
+    padding: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+.soft-background {
+    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 10%;
+    background-color: var(--secondary-color-L);
+}
+
+.soft-background-primary {
+    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 10%;
+    background-color: var(--main-color-D);
+}
+
+.tight-background {
+    padding: 1%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: auto;
+    background-color: var(--main-color-DD);
+}
+
+.sidebar {
+    background-color: var(--tertiary-color);
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    transition: all 0.5s;
+    margin-left: -250px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar a {
+    padding: 5px;
+    font-size: large;
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar a:hover {
+    background-color: #00000022;
+}
+
+.toggle-btn {
+    position: fixed;
+    left: 5px;
+    top: 5px;
+    z-index: 2;
+    transition: all 0.5s;
+}
+
+.main {
+    min-width: 100%;
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.banner {
+    min-width: 100%;
+    background-color: var(--secondary-color-D);
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.banner img {
+    position: absolute;
+
+    object-fit: scale-down;
+
+    height: 100px;
+    max-width: 10vw;
+
+    right: 20px;
+    top: 5px;
+
+    opacity: 0.8;
+}
+
+.CTA-buttons button {
+    background-color: var(--tertiary-color-DD);
+}
+
+.open {
+    margin-left: 0px;
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.footer {
+    width: 100%;
+    max-width: 100vw;
+    padding: 5px;
+    padding-top: 20px;
+    background-color: var(--secondary-color-DD);
+    transition: 0.5s;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.socials {
+    align-self: flex-start;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #000000dd;
+}
+
+.footer-contacts {
+    align-self: flex-end;
+}
+
+#footer-row {
+    display: flex;
+
+}
+
+.contact-page {
+    width: 100%;
+    text-align: center;
+}
+
+.widebox {
+    min-width: 200px;
+    width: 80%;
+}
+
+.longbox {
+    height: 250px;
+}
+
+.map {
+    height: 800px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    border: pink solid 3px;
+    border-radius: 2%;
+}
+
+.contact-button {
+    width: 60%;
+    height: 50px;
+}
+
+.contact-label {
+    margin-left: 10%;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.short-page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.card {
+    margin-left: 1vw;
+    margin-right: 1vw;
+
+    padding: 5px;
+
+    max-width: 30vw;
+    min-width: 250px;
+    min-height: 80vh;
+    margin-top: 10px;
+
+    background-color: var(--main-color-D);
+}
+
+.card img {
+    max-height: 50vh;
+    max-width: 80vw;
+    padding: 5px;
+
+    object-fit: scale-down;
+    align-self: center;
+
+    border: dotted 2px var(--secondary-color-DD);
+}
+
+.cart {
+    display: flex;
+    align-content: space-between;
+    padding: 5px;
+}
+
+.services-btn {
+    background-color: var(--secondary-color);
+}
+
+.services-btn-2 {
+    background-color: var(--tertiary-color);
+}
+
+.services-img-left {
+    max-width: 50vw;
+    max-height: 700px;
+
+    object-fit: scale-down;
+
+    margin-right: 10vw;
+    border-radius: 10%;
+}
+
+.button-div {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -50px;
+    margin-right: 10px;
+}
+
+.picWithText p {
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+}
+
+.picWithText {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-area p {
+    margin-bottom: 60px;
+}
+
+.side-card{
+    margin: 5px;
+}
+
+
+@media (max-height: 765px) {
+    .short-page-footer {
+        position: static;
+    }
+
+    .services-img-left {
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .homecard img {
+        max-width: fit-content;
+    }
+}
+
+@media (max-width: 1097px) {
+    .homecard {
+        min-width: 600px;
+        max-width: 900px;
+    }
+
+    
+}
+
+@media (max-width: 750px) {
+    .homecard {
+        min-width: 450px;
+        max-width: 900px;
+    }
+
+    .short-page-footer {
+        position: static;
+    }
+
+    .banner img {
+        position: relative;
+        height: 15vh;
+        max-width: 150px;
     }
 
     .picWithText {
